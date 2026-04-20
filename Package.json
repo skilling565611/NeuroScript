@@ -1,0 +1,59 @@
+{
+  "name": "neuroscript",
+  "displayName": "NeuroScript",
+  "description": "VS Code language support for NeuroScript.",
+  "version": "0.0.1",
+  "publisher": "skilling565611",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "keywords": [
+    "neuroscript",
+    "language",
+    "syntax",
+    "highlighting"
+  ],
+  "activationEvents": [
+    "onLanguage:neuroscript"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "neuroscript",
+        "aliases": ["NeuroScript", "neuroscript"],
+        "extensions": [".ns", ".neuro"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "neuroscript",
+        "scopeName": "source.neuroscript",
+        "path": "./syntaxes/neuroscript.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "neuroscript",
+        "path": "./snippets/neuroscript.json"
+      }
+    ]
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "npm run compile",
+    "lint": "echo \"Add linting later\"",
+    "pretest": "npm run compile"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.90.0",
+    "@types/node": "^20.14.0",
+    "typescript": "^5.5.4"
+  }
+}

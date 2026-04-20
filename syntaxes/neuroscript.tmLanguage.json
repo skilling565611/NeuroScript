@@ -1,0 +1,33 @@
+{
+  "scopeName": "source.neuroscript",
+  "name": "NeuroScript",
+  "patterns": [
+    {
+      "match": "\\b(function|let|const|if|else|return|while|for|true|false|null)\\b",
+      "name": "keyword.control.neuroscript"
+    },
+    {
+      "match": "\\b[0-9]+(\\.[0-9]+)?\\b",
+      "name": "constant.numeric.neuroscript"
+    },
+    {
+      "begin": "\"",
+      "end": "\"",
+      "name": "string.quoted.double.neuroscript"
+    },
+    {
+      "begin": "'",
+      "end": "'",
+      "name": "string.quoted.single.neuroscript"
+    },
+    {
+      "match": "//.*$",
+      "name": "comment.line.double-slash.neuroscript"
+    },
+    {
+      "begin": "/\\*",
+      "end": "\\*/",
+      "name": "comment.block.neuroscript"
+    }
+  ]
+}
